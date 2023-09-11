@@ -59,16 +59,20 @@ a {
 }
 /****** Nav *****/
 footer,
-nav {
+header {
   display: flex;
   flex-direction: row;
   align-items: center;
   justify-content: space-between;
 }
 
+.Localisation .fa-solid {
+  color: black;
+}
+
 .nav-hover:hover a {
   border-top: 2px #0065fc solid;
-  color: #0065fc;
+  color: hsl(216, 100%, 49%);
   padding-top: 19px;
 }
 
@@ -84,12 +88,19 @@ nav {
   width: 61px;
   height: auto;
 }
+.span-info-icon {
+  border: 1px gray solid;
+  padding: 10px;
+  border-radius: 50%;
+  color: #0065fc;
+}
 
 /****** Headline ******/
 .filtres {
   display: flex;
   flex-direction: row;
   gap: 15px;
+  align-items: center;
 }
 
 .button-filtre:hover {
@@ -107,15 +118,19 @@ nav {
   display: none;
 }
 
-.button {
+.search-desktop {
   background-color: #0065fc;
   color: white;
   border-radius: 0px 15px 15px 0px;
   width: 132px;
   height: 49px;
+  border: 0;
 }
 
 .Localisation {
+  display: flex;
+  justify-content: center;
+  align-items: center;
   background-color: #d9d9d9;
   border-radius: 15px 0px 0px 15px;
   width: 50px;
@@ -123,7 +138,7 @@ nav {
 
 .search-bar {
   display: flex;
-  flex-direction: row;
+  /* flex-direction: row; */
 }
 
 /****** Hebergements And Populaires ***********/
@@ -151,13 +166,13 @@ nav {
 }
 
 .hebergements-cards .card {
-  width: 250.33px;
+  width: 100%;
   height: 207.25px;
   margin-top: 30px;
 }
 
 .hebergements-cards img {
-  width: 250px;
+  width: 100%;
   height: 124px;
   border-top-left-radius: 20px;
   border-top-right-radius: 20px;
@@ -165,7 +180,7 @@ nav {
 }
 
 .hebergements-cards .card-content {
-  width: 250.33px;
+  width: 100%;
   padding-left: 15px;
   display: flex;
   flex-direction: column;
@@ -230,6 +245,39 @@ nav {
   margin-bottom: 5px;
 }
 
+/****** activité ******/
+.Activites-cards {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  gap: 30px;
+}
+
+.Activites-cards .card {
+  width: 100%;
+  height: 439px;
+}
+
+.Activites-cards img {
+  width: 100%;
+  height: 380px;
+  border-top-left-radius: 20px;
+  border-top-right-radius: 20px;
+  object-fit: cover;
+}
+
+.Activites-cards .card-content {
+  width: 100%;
+  padding-left: 15px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.Activites-cards .card-title {
+  margin-top: 10px;
+  margin-bottom: 4px;
+}
+
 /* Le code ci-dessous correspond à la version responsive uniquement */
 
 /****** Media queries ***********/
@@ -270,7 +318,7 @@ nav {
 /* Small devices (phones, less than 768px) */
 @media (max-width: 767.98px) {
   /* ... */
-  .button {
+  .search-desktop {
     display: none;
   }
   .search-mobile {
