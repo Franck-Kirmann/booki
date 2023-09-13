@@ -111,7 +111,8 @@ header {
   border: #d9d9d9 2px solid;
   border-radius: 25px;
   padding: 4px 19px;
-  gap: 10px;
+  gap: 15px;
+  margin-right: 15px;
 }
 
 .search-mobile {
@@ -127,18 +128,21 @@ header {
   border: 0;
 }
 
+.text-search {
+  border-color: #f2f2f2;
+}
+
 .Localisation {
   display: flex;
   justify-content: center;
   align-items: center;
-  background-color: #d9d9d9;
+  background-color: #f2f2f2;
   border-radius: 15px 0px 0px 15px;
   width: 50px;
 }
 
 .search-bar {
   display: flex;
-  /* flex-direction: row; */
 }
 
 /****** Hebergements And Populaires ***********/
@@ -250,11 +254,13 @@ header {
   display: grid;
   grid-template-columns: 1fr 1fr 1fr 1fr;
   gap: 30px;
+  margin: 30px;
 }
 
 .Activites-cards .card {
   width: 100%;
   height: 439px;
+  padding: unset;
 }
 
 .Activites-cards img {
@@ -278,19 +284,38 @@ header {
   margin-bottom: 4px;
 }
 
+/**** footer *****/
+footer {
+  background-color: #f2f2f2;
+  display: flex;
+  justify-content: space-around;
+}
+
+.footer {
+  display: flex;
+  flex-direction: column;
+  padding: 15px;
+}
 /* Le code ci-dessous correspond à la version responsive uniquement */
 
 /****** Media queries ***********/
 /* Medium devices (tablets, less/equal than 1024px) */
 @media (max-width: 1024px) {
+  /****** Nav *****/
+
+  /****** Headline ******/
+
+  /****** Hebergements And Populaires ***********/
   .hebergements-and-populaires {
     flex-direction: column;
   }
 
+  /****** Hebergements ***********/
   .hebergements {
     width: 100%;
   }
 
+  /****** Populaires ***********/
   .populaires {
     width: 100%;
     margin-top: 50px;
@@ -313,15 +338,45 @@ header {
   .populaires-cards .card-subtitle {
     font-size: 13px;
   }
+  /****** activité ******/
+
+  /**** footer *****/
 }
 
 /* Small devices (phones, less than 768px) */
 @media (max-width: 767.98px) {
-  /* ... */
+  /****** Nav *****/
+  header {
+    flex-direction: column;
+  }
+
+  /****** Headline ******/
   .search-desktop {
     display: none;
   }
+
   .search-mobile {
     display: contents;
+    display: block;
+    background-color: #0065fc;
+    border-radius: 15px;
+    justify-content: center;
+    align-items: center;
+    height: 63px;
+    width: 63px;
   }
+
+  .search-mobile .fa-solid {
+    color: white;
+  }
+
+  /****** Hebergements And Populaires ***********/
+
+  /****** Hebergements ***********/
+
+  /****** Populaires ***********/
+
+  /****** activité ******/
+
+  /**** footer *****/
 }
