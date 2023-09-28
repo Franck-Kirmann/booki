@@ -132,6 +132,11 @@ header {
   margin: 35px 0;
 }
 
+::placeholder {
+  color: black;
+  opacity: 1;
+}
+
 .text-search {
   border: 1px #f2f2f2 solid;
   text-align: center;
@@ -442,14 +447,14 @@ footer {
     border-top: transparent;
     border-bottom: 2px #0065fc solid;
   }
-
+  /****** Headline ******/
   .Headline {
     padding: 0 5%;
   }
-  /****** Headline ******/
+
   .text-search {
     display: block;
-    width: 90%;
+    width: 80%;
     height: 63px;
   }
 
@@ -458,8 +463,7 @@ footer {
   }
 
   .search-mobile {
-    position: absolute;
-    right: 1px;
+    margin-left: -20px;
     display: none;
     display: block;
     background-color: #0065fc;
@@ -487,6 +491,10 @@ footer {
   }
   .hebergements-and-populaires section {
     border-radius: 0;
+  }
+
+  .hebergements-and-populaires .hebergements {
+    background-color: #d9d9d9;
   }
 
   /****** Hebergements ***********/
